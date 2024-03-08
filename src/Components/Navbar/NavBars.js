@@ -8,6 +8,7 @@ import InputGroup from 'react-bootstrap/InputGroup';
 import ReactStars from "react-rating-stars-component";
 import 'bootstrap/dist/css/bootstrap.min.css';
 import AddMovie from '../AddMovie/AddMovie';
+import { Link } from 'react-router-dom';
 
 const NavBars = ({ ratingChange, setRatingChanged , setSearchInput, newMovie,setNewMovie, handelSave }) => {
   const ratingChanged = (rating) => {
@@ -27,9 +28,8 @@ const NavBars = ({ ratingChange, setRatingChanged , setSearchInput, newMovie,set
         <Container>
           <Navbar.Brand href="#home">MovieZone</Navbar.Brand>
           <Nav className="me-auto">
-            <Nav.Link href="#home">Home</Nav.Link>
-            <Nav.Link href="#features">Features</Nav.Link>
-            <Nav.Link href="#pricing">Pricing</Nav.Link>
+            <Nav.Link ><Link to="/"> Home</Link></Nav.Link>
+            <Nav.Link ><Link to="/movie-details"> Movie details</Link></Nav.Link>
             <Button variant='secondary' onClick={handleShow}>Add New Movie </Button> 
           </Nav>
         </Container>

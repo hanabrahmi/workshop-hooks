@@ -3,6 +3,7 @@ import Button from 'react-bootstrap/Button';
 import Card from 'react-bootstrap/Card';
 import ReactStars from "react-rating-stars-component";
 import './MovieCardStyle.css';
+import { Link } from 'react-router-dom';
 const MovieCard = ({ movie , key }) => {
   return (
     <div key={key} >
@@ -18,6 +19,8 @@ const MovieCard = ({ movie , key }) => {
             edit={false}
           />
           <p>{movie.description}</p>
+          <Link to={`/movie-Details/${movie.id}`} >
+          <Button variant='primary'>Movie trailer</Button> </Link>
         </Card.Body>
         
       </Card>
